@@ -9,11 +9,17 @@ input.addEventListener('keydown', function(event) {
         const newItem = document.createElement('div');
         newItem.classList.add('item');
         newItem.textContent = messageItem;
+
+        if(messageItem != '') {
+            item.append(newItem);
+        }
+
+        input.value = '';
+
         newItem.addEventListener("click", function() {
             newItem.classList.toggle("done")
         });
-        item.append(newItem);
-        input.value = ' ';
+        
     }
 })
 
